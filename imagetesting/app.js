@@ -12,7 +12,6 @@
   app.use('/', express.static(__dirname + '/public'));
 
 
-
   //MULTER CONFIG: to get file photos to temp server storage
   const multerConfig = {
 
@@ -47,7 +46,7 @@
           next(null, true);
         }else{
           console.log("file not supported")
-          //TODO:  A better message response to user on failure.
+
           return next();
         }
     }
@@ -64,9 +63,8 @@
       //Here is where I could add functions to then get the url of the new photo
       //And relocate that to a cloud storage solution with a callback containing its new url
       //then ideally loading that into your database solution.   Use case - user uploading an avatar...
-      res.send('Complete! Check out your public/photo-storage folder.  Please note that files not encoded with an image mimetype are rejected. <a href="index.html">try again</a>');
-  }
-
+      res.render('processimage.html');
+    }
 );
 
   // RUN SERVER
