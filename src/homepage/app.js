@@ -40,16 +40,13 @@
     promise.catch(e => console.log(e.message));
   });
 
-  btnLogout.addEventListener("click", e => {
-    firebase.auth().signOut();
-  });
-
   //Add a realtime listener
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
       window.location = "../dashboard/index2.html"; //After successful login, user will be redirected to home.html
       console.log(firebaseUser);
     } else {
+      window.location = "../homepage/index.html";
       console.log("not logged in");
     }
   });
