@@ -2,6 +2,9 @@
 
 *strive* is an application built at MedHacks 2018  that tackles the BlueCross BlueShield Association challenge of Community Health Infrastructure.
 
+![Image Not Found](striveLogo.png)
+
+
 ## MedHacks 2018 -- John's Hopkins University
 
 ![Image Not Found](medhacksbanner.png)
