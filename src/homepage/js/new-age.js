@@ -26,6 +26,23 @@
     offset: 54
   });
 
+
+  // ========================================================================= //
+  //  Typed Js
+  // ========================================================================= //
+
+  var typed = $(".typed");
+
+  $(function() {
+    typed.typed({
+      strings: ["Ryan Deus.", "An Engineer.", "A Savant."],
+      typeSpeed: 100,
+      loop: true,
+    });
+  });
+//
+
+
   // Collapse Navbar
   var navbarCollapse = function() {
     if ($("#mainNav").offset().top > 100) {

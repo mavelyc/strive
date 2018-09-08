@@ -323,6 +323,9 @@ section.cta .overlay {
 
 section.contact {
   text-align: center;
+  background: url("../img/bg-pattern.png"), #7b4397;
+  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #7b4397, #dc2430);
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
 }
 
 section.contact h2 {
@@ -434,4 +437,8 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 .btn-xl {
   font-size: 11px;
   padding: 15px 45px;
+}
+
+.logop{
+  padding-right: 20px;
 }
