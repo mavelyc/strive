@@ -26,6 +26,25 @@
   <!-- Custom styles for this template -->
   <link href="css/new-age.min.css" rel="stylesheet">
 
+  <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBegO-coeV9SLIGJILD0nx1087yTc2kg_8",
+      authDomain: "strive-c70c3.firebaseapp.com",
+      databaseURL: "https://strive-c70c3.firebaseio.com",
+      projectId: "strive-c70c3",
+      storageBucket: "strive-c70c3.appspot.com",
+      messagingSenderId: "15027244781"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <!-- Firebase App is always required and must be first -->
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+
+  <!-- Add additional services that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
 </head>
 
 <body id="page-top">
@@ -116,7 +135,7 @@
       </div>
     </div>
   </section>
-  
+
 
   <section class="contact bg-primary" id="contact">
     <div class="container">
