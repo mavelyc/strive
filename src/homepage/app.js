@@ -17,7 +17,6 @@
   const newEmail = document.getElementById("uname2");
   const newPassword = document.getElementById("pwd2");
   const btnSignup = document.getElementById("btnSignup");
-  const btnLogout = document.getElementById("btnLogout");
 
   // Add login event
   btnLogin.addEventListener("click", e => {
@@ -46,7 +45,6 @@
       window.location = "../dashboard/index2.html"; //After successful login, user will be redirected to home.html
       console.log(firebaseUser);
     } else {
-      window.location = "../homepage/index.html";
       console.log("not logged in");
     }
   });
