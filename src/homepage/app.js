@@ -17,6 +17,7 @@
   const newEmail = document.getElementById("uname2");
   const newPassword = document.getElementById("pwd2");
   const btnSignup = document.getElementById("btnSignup");
+  const btnLogout = document.getElementById("btnLogout");
 
   // Add login event
   btnLogin.addEventListener("click", e => {
@@ -37,6 +38,10 @@
     // Sign in
     const promise = auth.createUserWithEmailAndPassword(email, pass);
     promise.catch(e => console.log(e.message));
+  });
+
+  btnLogout.addEventListener("click", e => {
+    firebase.auth().signOut();
   });
 
   //Add a realtime listener
