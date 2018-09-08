@@ -10,7 +10,7 @@ You can check out strive at:
 ## About
 The aim of strive is to help individuals reach their fitness and nutritional goals by providing with a supportive community environment. 
 
-### WatchSafe:
+### strive allws you to:
 * connects you with peers in your zip code to enable you to form accountability groups
 * encourages friendly competition between you and your group
 * uses computer vision to suggest healthy meals based on the ingredients you already have
