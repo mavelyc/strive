@@ -42,7 +42,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#download">Download</a>
+            <a class="btn btn-primary btn-lg" role="button" data-toggle="modal" href="#loginModal">Log In</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#features">Features</a>
@@ -120,7 +120,7 @@
               </div>
               <div class="col-lg-6">
                 <div class="feature-item">
-                  <i class="icon-lock-open text-primary"></i>
+                  <i class="icon-people text-primary"></i>
                   <h3>Open Source</h3>
                   <p class="text-muted">Since this theme is MIT licensed, you can use it commercially!</p>
                 </div>
@@ -166,6 +166,73 @@
       </ul>
     </div>
   </section>
+
+
+
+  <div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Login</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        </div>
+        <div class="modal-body">
+          <form class="form" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+            <div class="form-group">
+              <a class="btn btn-link btn-sm float-right" role="button" data-toggle="modal" href="#signupModal">New user?
+              </a>
+              <label for="uname1">Username</label>
+              <input type="text" class="form-control form-control-lg" name="uname1" id="uname1" required="">
+              <div class="invalid-feedback">Oops, you missed this one.</div>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control form-control-lg" id="pwd1" required="" autocomplete="new-password">
+              <div class="invalid-feedback">Enter your password too!</div>
+            </div>
+            <div class="form-group py-4">
+              <button class="btn btn-outline-secondary btn-sm" data-dismiss="modal" aria-hidden="true">Cancel</button>
+              <button type="submit" class="btn btn-primary btn-sm float-right" id="btnLogin">Log In</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="signupModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Sign Up</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        </div>
+        <div class="modal-body">
+          <form class="form" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+            <div class="form-group">
+              <label for="uname1">Username</label>
+              <input type="text" class="form-control form-control-lg" name="uname2" id="uname1" required="">
+              <div class="invalid-feedback">Oops, you missed this one.</div>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control form-control-lg" id="pwd2" required="" autocomplete="new-password">
+              <div class="invalid-feedback">Enter your password too!</div>
+            </div>
+            <div class="form-group">
+              <label>Confirm Password</label>
+              <input type="password" class="form-control form-control-lg" id="pwd3" required="" autocomplete="new-password">
+              <div class="invalid-feedback">Enter your password again!</div>
+            </div>
+            <div class="form-group py-4">
+              <button class="btn btn-outline-primary btn-sm" data-dismiss="modal" aria-hidden="true">Cancel</button>
+              <button type="submit" class="btn btn-primary btn-sm float-right" id="btnLogin">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer>
     <div class="container">
