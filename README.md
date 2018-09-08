@@ -11,7 +11,7 @@
 You can check out strive at: 
 
 ## About
-The aim of strive is to help individuals reach their fitness and nutritional goals by providing with a supportive community environment.
+The aim of strive is to help individuals reach their fitness and nutritional goals by providing them with a supportive community environment.
 
 ### strive allows you to:
 * connects you with peers in your zip code to enable you to form accountability groups
