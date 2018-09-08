@@ -18,19 +18,6 @@
 
 'use strict'; // makes our code cleaner and easier to read
 
-// use express
-var express = require('express');
-var app = express();
-app.get('/', function(req, res){
-  res.status(200).send('hello from medhacks');
-})
-
-var server = app.listen(process.env.PORT||'8080', function(){
-  console.log('app listening on port %s', server.address().port)
-  console.log('press ctrl + c to quit');
-}); // listening in on our server to establish a response
-
-
 
 // [START vision_quickstart]
 // Imports the Google Cloud client library
@@ -45,10 +32,28 @@ client
 .then(results => {
   const labels = results[0].labelAnnotations;
   
+  // use express
+  var express = require('express');
+  var app = express();
+  app.get('/', function(req, res){
+    labels.forEach(label=>res.status(200).send(label.description));
+  })
+  
+  var server = app.listen(process.env.PORT||'8080', function(){
+    console.log('app listening on port %s', server.address().port)
+    console.log('press ctrl + c to quit');
+  }); // listening in on our server to establish a response
+  
+  
   console.log('Labels:');
   labels.forEach(label => console.log(label.description));
 })
 .catch(err => {
   console.error('ERROR:', err);
 });
+
+
+
+
+
 // [END vision_quickstart]
