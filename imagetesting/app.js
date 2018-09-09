@@ -55,8 +55,8 @@ const multerConfig = {
 };
 
 
-/* ROUTES
-**********/
+/* ROUTES **********/
+
 app.get('/', function(req, res){
     res.render('index.html');
 });
@@ -88,10 +88,14 @@ app.post('/upload', multer(multerConfig).single('photo'),function(req, res){
         labels.forEach(label => descriptions += label.description + ",");
 
         console.log("desc: " + descriptions);
-        //for each put intot a string separated by common
+        //for each put intot a string separated by comma
 
         res.setHeader('Content-Type', 'application/json');
         res.send(JSON.stringify(descriptions));
+
+        app.get('/', function(req, res){
+            res.send(JSON.stringify(descriptions));
+        });
 
 
         //app.get('/', function(req, res){
@@ -99,8 +103,6 @@ app.post('/upload', multer(multerConfig).single('photo'),function(req, res){
         //});
         
         // log to console for testing purposes
-        
-        //return labels;
     })
     .catch(err => {
         console.error('ERROR:', err);
