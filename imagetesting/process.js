@@ -1,4 +1,3 @@
-
 /**
 * Copyright 2017, Google, Inc.
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -56,25 +55,3 @@ client
 
 
 // [END vision_quickstart]
-
-
-  /* ROUTES
-  **********/
- app.get('/', function(req, res){
-    res.render('processimage.html');
-  });
-
-  app.post('/upload', multer(multerConfig).single('photo'),function(req, res){
-      //Here is where I could add functions to then get the url of the new photo
-      //And relocate that to a cloud storage solution with a callback containing its new url
-      //then ideally loading that into your database solution.   Use case - user uploading an avatar...
-      res.send('it worked');
-  }
-
-);
-
-  // RUN SERVER
-  app.listen(port,function(){
-    console.log(`Server listening on port ${port}`);
-  });
-

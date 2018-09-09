@@ -26,15 +26,17 @@ const vision = require('@google-cloud/vision');
 // Creates a client
 const client = new vision.ImageAnnotatorClient();
 
+// use express
+var express = require('express');
+var app = express();
+
 // Performs label detection on the image file
 client
 .labelDetection('./burgers.jpg')
 .then(results => {
   const labels = results[0].labelAnnotations;
   
-  // use express
-  var express = require('express');
-  var app = express();
+  
   app.get('/', function(req, res){
     labels.forEach(label=>res.status(200).send(label.description));
   })
@@ -51,9 +53,6 @@ client
 .catch(err => {
   console.error('ERROR:', err);
 });
-
-
-
 
 
 // [END vision_quickstart]
