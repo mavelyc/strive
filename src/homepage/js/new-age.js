@@ -34,6 +34,7 @@
     offset: 54
   });
 
+
   // Collapse Navbar
   var navbarCollapse = function() {
     if ($("#mainNav").offset().top > 100) {
