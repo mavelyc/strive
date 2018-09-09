@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 
 // SETUP APP
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use('/', express.static(__dirname + '/public'));
@@ -56,7 +56,7 @@ const multerConfig = {
 /* ROUTES **********/
 
 app.get('/', function(req, res){
-    res.render('index.html');
+    res.render('indexrecipe.html');
 });
 
 app.post('/upload', multer(multerConfig).single('photo'),function(req, res){
