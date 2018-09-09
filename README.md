@@ -18,10 +18,16 @@ The aim of Strive is to help individuals reach their fitness and nutritional goa
 * Uses computer vision to suggest healthy meals based on the ingredients you already have
 * Allows you to easily and quickly track your food intake via Google Cloud Vision Recognition
 
+
+## Screenshots
+
+![Landing Page](landingpage.png)
+![Dashboard](dashboard.png)
+
 ### Technology
 * Google Firebase for the backend
 * Google Cloud Vision API
-* Twitter's Bootstrap framework
+* Twitter's Bootstrap Framework
 * Fatsecret Nutritional API
 * Spoonacular Recipe API
 
