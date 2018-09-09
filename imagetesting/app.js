@@ -71,7 +71,8 @@ app.post('/upload', multer(multerConfig).single('photo'),function(req, res){
     
     // Creates a client
     const client = new vision.ImageAnnotatorClient();
-        
+    
+    
     var express = require('express');
     var app = express();
     
