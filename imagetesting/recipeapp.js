@@ -56,7 +56,7 @@ const multerConfig = {
 /* ROUTES **********/
 
 app.get('/', function(req, res){
-    res.render('indexrecipe.html');
+    res.render('./public/indexrecipe.html');
 });
 
 app.post('/upload', multer(multerConfig).single('photo'),function(req, res){
