@@ -29,7 +29,7 @@
   color: #fff;
 }
 .skin-blue .main-header .navbar .sidebar-toggle:hover {
-  background-color: #d81b60;
+  background-color: #d81b99;
 }
 @media (max-width: 767px) {
   .skin-blue .main-header .navbar .dropdown-menu li.divider {
@@ -43,7 +43,7 @@
   }
 }
 .skin-blue .main-header .logo {
-  background-color: #d81b60;
+  background-color: #b30f4b;
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
@@ -233,7 +233,7 @@
   background: #f4f4f5;
 }
 .skin-blue-light .sidebar-menu > li.active {
-  border-left-color: #3c8dbc;
+  border-left-color: #86032f;
 }
 .skin-blue-light .sidebar-menu > li.active > a {
   font-weight: 600;
@@ -1842,6 +1842,6 @@
   }
 }
 
-.maroon1{
-  background-color: #d81b60
+.maroon1 {
+  background-color: #d81b60;
 }
