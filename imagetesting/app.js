@@ -30,7 +30,7 @@ const multerConfig = {
             console.log(file);
             //get the file mimetype ie 'image/jpeg' split and prefer the second value ie'jpeg'
             const ext = file.mimetype.split('/')[1];
-            //set the file fieldname to a unique name containing the original name, current datetime and the extension.
+            //set the filename so we can easily retrieve it later 
             next(null, file.fieldname = 'userupload.jpg');
         }
     }),
@@ -72,7 +72,7 @@ app.post('/upload', multer(multerConfig).single('photo'),function(req, res){
     // Creates a client
     const client = new vision.ImageAnnotatorClient();
     
-    // use express
+    
     var express = require('express');
     var app = express();
     
@@ -82,21 +82,25 @@ app.post('/upload', multer(multerConfig).single('photo'),function(req, res){
     .then(results => {
         const labels = results[0].labelAnnotations;
         
-        
-        app.get('/', function(req, res){
-            labels.forEach(label=>res.status(200).send(label.description));
-        })
-        
-        var server = app.listen(process.env.PORT||'8080', function(){
-            console.log('app listening on port %s', server.address().port)
-            console.log('press ctrl + c to quit');
-            
-        }); // listening in on our server to establish a response
-        
-        // log to console for testing purposes
+        let descriptions = "";
         console.log('Labels:');
         labels.forEach(label => console.log(label.description));
+        labels.forEach(label => descriptions += label.description + ",");
 
+        console.log("desc: " + descriptions);
+        //for each put intot a string separated by common
+
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify(descriptions));
+
+
+        //app.get('/', function(req, res){
+        //    labels.forEach(label=>res.status(200).send(label.description));
+        //});
+        
+        // log to console for testing purposes
+        
+        //return labels;
     })
     .catch(err => {
         console.error('ERROR:', err);
