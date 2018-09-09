@@ -2411,6 +2411,16 @@ a:focus {
 .alert-info {
   border-color: #00acd6;
 }
+.alert-maroon{
+  border-color: #e5427e;
+  background-color: #e5427e;
+  color:#fff;
+}
+.alert-maroon2{
+  border-color: #d81b60;
+  background-color: #d81b60;
+  color:#fff;
+}
 /*
  * Component: Nav
  * --------------
