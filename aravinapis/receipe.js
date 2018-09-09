@@ -1,22 +1,5 @@
 
 
-/*var unirest= require('unirest');
-
-var geturl= "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=";
-
-var ingridients= "apples flour sugar";
-
-
-var end= "&number=5&ranking=1";
-
-
-unirest.get(geturl + ingridients + end)
-.header("X-Mashape-Key", "O6HyespcYamshIdsOvlwl5bGoLuRp1seXzCjsniTBx4fMVamlu")
-.header("X-Mashape-Host", "spoonacular-recipe-food-nutrition-v1.p.mashape.com")
-.end(function (result) {
-     console.log(result.status, result.headers, result.body);
-     });*/
-
 var http = require("http");
 var express = require('express');
 var app = express();
@@ -83,81 +66,76 @@ app.post('/thank', urlencodedParser, function (req, res){
       
       app.set('view engine', 'hbs');
       
-    var hbs = require('hbs');
-      var router = express.Router();
-      
-      window.onload = function() {
-      //Grab the inline template
-      var template = document.getElementById('template').innerHTML;
-      
-      //Compile the template
-      var compiled_template = Handlebars.compile(template);
-      
-      //Render the data into the template
-      var rendered = compiled_template({name: "Luke", power: "force"});
-      
-      //Overwrite the contents of #target with the renderer HTML
-      document.getElementById('target').innerHTML = rendered;
-      }
+     
+     
+        var html = buildHtml(req);
+                               
+                               res.writeHead(200, {
+                                             'Content-Type': 'text/html',
+                                             'Content-Length': html.length,
+                                             'Expires': new Date().toUTCString()
+                                             });
+                               res.end(html);
+                               
+                               
+                               
+                               function buildHtml(req) {
+                               var header = 'WHAT HEALTHY MEALS ARE AVAILABLE IN YOUR FRIDGE?';
+                               
+                               var body = "The Dish: "+result.body[0].title+"\n\n";
+                               
+                               var body2="Link To The Recipe: "+result.body[0].image+"%\n";
+                               
+                                   
+                               var body3 = "The Dish:  "+result.body[1].title+"\n\n";
+                                   
+                             var body4="Link To The Recipe: "+result.body[1].image+"%\n";
+                                   
+                                   var body5 = "The Dish:    "+result.body[2].title+"\n\n";
+                                   
+                                    var body6="Link To The Recipe: "+result.body[2].image+"%\n";
+                                   
+                                    var body7="The Dish:     "+result.body[3].title+"%\n";
+                                   
+                                   
+                                    var body8="Link To The Recipe: "+result.body[3].image+"%\n";
+                                   
+                                   
+                                   var b= result.body[0].image;
+                                   
+                                   
+                               
+                                   
+                               
+
+                               
+                               
+                               
+                               
+                               // concatenate header string
+                               // concatenate body string
+                               
+                               return '<!DOCTYPE html>'
+                               + '<html><centre><header><strong>' + header+'</strong><br /><br /><br </centre><body>' + body+'<br />'+ body2 + '<br /><br />'+ body3 +'<br />'+body4 + '<br /><br />'+body5+'<br />'+ body6 + '<br /><br />'+ body7 +'<br />'+body8+'</centre>';
+                               };
+   
       
  });
+    
+});
+
+
          
-         /*request.post(options, (error, response, body) => {
-                      if (error) {
-                      console.log('Error: ', error);
-                      return;
-                      }
-                      let jsonResponse = JSON.parse(body);
-                      
-                      console.log("The sex of the individual is: "+jsonResponse[0].title+"\n\n");
-                      
-                      
-                      
-                      });*/
          
- 
+   
          
-         });
+       
         
         
 
 
 
-import React from 'react';
 
-export default class UserList extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        person: []
-        };
-    }
-    
-    UserList(){
-        return $.getJSON('https://randomuser.me/api/')
-        .then(function(data) {
-              return data.results;
-              });
-    }
-    
-    render() {
-        this.UserList().then(function(res){
-                             this.state = {person: res};
-                             });
-        return (
-                <div id="layout-content" className="layout-content-wrapper">
-                <div className="panel-list">
-                {this.state.person.map((item, i) =>{
-                                       return(
-                                              <h1>{item.name.first}</h1>
-                                              <span>{item.cell}, {item.email}</span>
-                                              )
-                                       })}
-                <div>
-                </div>
-                )
-    }
-}
 
 
 
