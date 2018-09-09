@@ -80,8 +80,9 @@ app.post('/upload', multer(multerConfig).single('photo'),function(req, res){
     client
     .labelDetection('./public/photo-storage/userupload.jpg')
     .then(results => {
+
+        // parse the json and cut out only the labels 
         const labels = results[0].labelAnnotations;
-        
         let descriptions = "";
         console.log('Labels:');
         labels.forEach(label => console.log(label.description));
@@ -91,7 +92,6 @@ app.post('/upload', multer(multerConfig).single('photo'),function(req, res){
         //for each put intot a string separated by comma
 
         res.setHeader('Content-Type', 'application/json');
-        res.send(JSON.stringify(descriptions));
 
         app.get('/', function(req, res){
             res.send(JSON.stringify(descriptions));
