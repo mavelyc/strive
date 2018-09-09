@@ -39,6 +39,7 @@
     "ckeditor": "^4.7.0",
     "datatables.net": "^1.10.15",
     "datatables.net-bs": "^1.10.15",
+    "express": "^4.16.3",
     "fastclick": "^1.0.6",
     "flot": "^0.8.0-alpha",
     "font-awesome": "^4.7.0",
@@ -56,6 +57,7 @@
     "pace": "0.0.4",
     "raphael": "^2.2.7",
     "select2": "^4.0.3",
-    "slimscroll": "^0.9.1"
+    "slimscroll": "^0.9.1",
+    "unirest": "^0.5.1"
   }
 }
