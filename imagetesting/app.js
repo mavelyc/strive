@@ -93,6 +93,10 @@ app.post('/upload', multer(multerConfig).single('photo'),function(req, res){
         res.setHeader('Content-Type', 'application/json');
         res.send(JSON.stringify(descriptions));
 
+        app.get('/', function(req, res){
+            res.send(JSON.stringify(descriptions));
+        });
+
 
         //app.get('/', function(req, res){
         //    labels.forEach(label=>res.status(200).send(label.description));
