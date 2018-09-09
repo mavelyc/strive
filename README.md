@@ -3,7 +3,7 @@
 **Strive to do better.**
 **Strive to be better** 
 
-Strive is an application built at MedHacks 2018 that tackles the BlueCross BlueShield Association challenge of Community Health and Infrastructure.
+Strive is an application built at MedHacks 2018 that tackles the BlueCross BlueShield Association challenge of Community Health and Infrastructure. Strive won top 10 hack of 750 competitors at MedHacks 2018, the world's largest medical hackathon. 
 
 ## MedHacks 2018 -- John's Hopkins University
 
