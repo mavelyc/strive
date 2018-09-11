@@ -1,4 +1,4 @@
-![Image Not Found](striveLogo.png)
+![Image Not Found](media/striveLogo.png)
 
 **Strive to do better.**
 **Strive to be better** 
@@ -7,7 +7,7 @@ Strive is an application built at MedHacks 2018 that tackles the BlueCross BlueS
 
 ## MedHacks 2018 -- John's Hopkins University
 
-![Image Not Found](medhacksbanner.png)
+![Image Not Found](media/medhacksbanner.png)
 
 ## About
 The aim of Strive is to help individuals reach their fitness and nutritional goals by providing them with a supportive community environment.
@@ -21,8 +21,8 @@ The aim of Strive is to help individuals reach their fitness and nutritional goa
 
 ## Screenshots
 
-![Landing Page](landingpage.png)
-![Dashboard](dashboard.png)
+![Landing Page](media/landingpage.png)
+![Dashboard](media/dashboard.png)
 
 ### Technology
 * Google Firebase for the backend
@@ -37,5 +37,7 @@ We really hope to be able to continue this project and implement it on a local s
 
 
 
-![Team Picture](medhacksteam.jpg)
+![Team Picture](media/medhacksteam.jpg)
+![Blue Cross Blue Shield Logo](media/bluecrosslogo.png) ![MLH Logo](media/mlhlogo.png)
 *Huge shoutout to the MedHacks team, including Fuad Ali, Christian Mavely, Aravin Sivakumar and Ryan Deus.*
+
