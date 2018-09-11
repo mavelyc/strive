@@ -38,6 +38,6 @@ We really hope to be able to continue this project and implement it on a local s
 
 
 ![Team Picture](media/medhacksteam.jpg)
-![Blue Cross Blue Shield Logo](media/bluecrosslogo.png) ![MLH Logo](media/mlhlogo.png)
+![Blue Cross Blue Shield Logo](media/bluecrosslogo.png)
 *Huge shoutout to the MedHacks team, including Fuad Ali, Christian Mavely, Aravin Sivakumar and Ryan Deus.*
 
